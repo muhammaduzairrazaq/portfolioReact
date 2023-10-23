@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-// import { ArrowRightCircle } from 'react-bootstrap-icons';
-// import 'animate.css';
-// import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -11,7 +8,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = ["Software Engineer", "Full Stack Developer", "Python Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -53,7 +50,7 @@ export const Banner = () => {
       <Row className="align-items-center">
         <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcom to my Portfolio</span>
-            <h1>{'Hi Iam Uzair'}<span className="wrap">{text}</span></h1>
+            <h1>{'Hi Iam Uzair '}<span className="wrap">{text}</span></h1>
             <p>Cupidatat et cillum laboris et aliqua. Amet velit laboris ad in nulla ullamco et sit do. Dolor excepteur voluptate est amet est exercitation ad. Minim adipisicing eu cillum ex aute in. Aliqua velit nulla nostrud dolor. Adipisicing labore magna dolore pariatur mollit et. Aliquip velit cillum eu proident.</p>
             <button onClick={()=>console.log('connect')}>Let's connect</button>
         </Col>
