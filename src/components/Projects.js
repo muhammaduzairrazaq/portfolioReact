@@ -5,6 +5,7 @@ import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import Nav from 'react-bootstrap/Nav';
 import { ProjectCard } from "./ProjectCard";
 
 export const Projects = () => {
@@ -43,38 +44,50 @@ export const Projects = () => {
 
   return (
     <section className="project" id="project">
-      <Container>
+     <Container>
         <Row>
-          <Col>
-            <h2>Projects</h2>
-            <p>
-              Tempor nostrud magna culpa deserunt esse officia tempor culpa
-              culpa est ut nulla elit. Mollit aliquip reprehenderit eu
-              adipisicing elit. Aute cillum nisi labore proident dolore id quis
-              ullamco occaecat fugiat. Incididunt nulla Lorem laboris aute
-              cillum. Aliqua sunt consequat deserunt ex excepteur voluptate
-              aliqua elit consectetur officia. Minim veniam in non in et commodo
-              nostrud sint tempor nulla non veniam excepteur et.
-            </p>
-            <Tabs defaultActiveKey="first" id="projects-tabs" className="mb-3">
-              <Tab eventKey="first" title="Tab One">
-                <Row>
-                  {projects.map((project, index) => {
-                    return <ProjectCard key={index} {...project} />;
-                  })}
-                </Row>
-              </Tab>
-              <Tab eventKey="second" title="Tab Two">
-                Lorem Ipsum
-              </Tab>
-              <Tab eventKey="third" title="Tab Three">
-                Lorem Ipsum
-              </Tab>
-            </Tabs>
+          <Col size={12}>
+                <h2>Projects</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                  <Tab.Content id="slideInUp" >
+                    <Tab.Pane eventKey="first">
+                      <Row>
+                        {
+                          projects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="section">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} />
+      <img className="background-image-right" src={colorSharp2} alt="img"/>
     </section>
   );
 };

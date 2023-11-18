@@ -52,10 +52,9 @@ export const Banner = () => {
             <span className="tagline">Welcom to my Portfolio</span>
             <h1>{'Hi Iam Uzair '}<span className="wrap">{text}</span></h1>
             <p>Cupidatat et cillum laboris et aliqua. Amet velit laboris ad in nulla ullamco et sit do. Dolor excepteur voluptate est amet est exercitation ad. Minim adipisicing eu cillum ex aute in. Aliqua velit nulla nostrud dolor. Adipisicing labore magna dolore pariatur mollit et. Aliquip velit cillum eu proident.</p>
-            <button onClick={()=>console.log('connect')}>Let's connect</button>
         </Col>
         <Col>
-        <img src={headerImg} alt="Header Image "></img>
+        <img src={headerImg} alt="Img"></img>
         </Col>
       </Row>
       </Container>
